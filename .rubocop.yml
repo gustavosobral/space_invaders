@@ -10,3 +10,6 @@ Metrics/MethodLength:
 
 Style/SpaceBeforeSemicolon:
   Enabled: false
+
+Style/RedundantReturn:
+  AllowMultipleReturnValues: true
