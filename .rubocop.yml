@@ -1,3 +1,7 @@
+AllCops:
+  Exclude:
+    - 'spec/**/*'
+
 Metrics/LineLength:
   Max: 100
 
@@ -6,3 +10,6 @@ Metrics/MethodLength:
 
 Style/SpaceBeforeSemicolon:
   Enabled: false
+
+Style/RedundantReturn:
+  AllowMultipleReturnValues: true
