@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 describe SpaceInvaders::Core::FileParser do
-
   it 'Raise error with invalid path' do
     expect do
       SpaceInvaders::Core::FileParser.new('invalid/path').process

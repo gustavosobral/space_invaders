@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 describe SpaceInvaders::Core::RadarImage do
-  subject do 
+  subject do
     SpaceInvaders::Core::RadarImage.new('#1',
                                         [['o', '-', '-', 'o', 'o', '-'],
                                          ['o', 'o', 'o', 'o', '-', '-'],
@@ -24,6 +26,6 @@ describe SpaceInvaders::Core::RadarImage do
   end
 
   it 'Subset your content' do
-    expect(subject.content_range(1..2, 3..4)).to eq([['o', '-'],['-', 'o']])
+    expect(subject.content_range(1..2, 3..4)).to eq([['o', '-'], ['-', 'o']])
   end
 end

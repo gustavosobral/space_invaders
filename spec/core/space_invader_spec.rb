@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 describe SpaceInvaders::Core::SpaceInvader do
-  subject do 
+  subject do
     SpaceInvaders::Core::SpaceInvader.new('Invader #1',
                                           [['o', '-', '-', 'o'],
                                            ['o', 'o', 'o', 'o'],

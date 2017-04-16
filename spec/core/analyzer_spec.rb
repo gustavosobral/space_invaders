@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe SpaceInvaders::Core::Analyzer do
   it 'Load files and execute algorithm properly' do
     analyzer_result = SpaceInvaders::Core::Analyzer.new(invaders: 'spec/fixtures/space_invaders',
@@ -18,7 +20,7 @@ describe SpaceInvaders::Core::Analyzer do
 
   it 'Raise exception if a invalid algorithm is selected' do
     expect do
-      analyzer_result = SpaceInvaders::Core::Analyzer.new(algorithm_name: :scam).analyze
+      SpaceInvaders::Core::Analyzer.new(algorithm_name: :scam).analyze
     end.to raise_error(SpaceInvaders::Core::AnalyzerError)
   end
 end
