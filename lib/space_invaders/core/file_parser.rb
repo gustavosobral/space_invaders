@@ -10,7 +10,7 @@ module SpaceInvaders
         @path = path
       end
 
-      # Process the file on path
+      # Process (Read and parse) the file on path
       # @return [Array] An Array of entities (Space invaders or radar images) as matrices of data
       def process
         @entities = []
@@ -22,7 +22,7 @@ module SpaceInvaders
       private
 
       def read_lines
-        File.readlines(@path).each do |line|
+        File.readlines(path).each do |line|
           if line.strip == '~~~~'
             @marker_found = !@marker_found
             treat_entity
