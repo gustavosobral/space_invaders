@@ -1,10 +1,13 @@
 # frozen_string_literal: true
 
+require 'coveralls'
+Coveralls.wear!
+
 require 'simplecov'
 SimpleCov.start do
-  add_group 'Gem', 'lib'
-  add_group 'Core', 'lib/space_invaders/core'
-  add_filter 'spec'
+  add_group 'Gem',  '/lib'
+  add_group 'Core', '/lib/space_invaders/core'
+  add_filter '/spec/'
 end
 
 require 'bundler/setup'
