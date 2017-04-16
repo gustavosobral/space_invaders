@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 module SpaceInvaders
   module Core
+    # Radar image entity
     class RadarImage
       attr_accessor :id, :content
 

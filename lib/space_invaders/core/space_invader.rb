@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 module SpaceInvaders
   module Core
+    # Space invader entity
     class SpaceInvader
       attr_accessor :name, :image
 
