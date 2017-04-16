@@ -1,5 +1,8 @@
 # SpaceInvaders
 
+[![Build Status](https://travis-ci.org/gustavosobral/space_invaders.svg?branch=master)](https://travis-ci.org/gustavosobral/space_invaders) [![Coverage Status](https://coveralls.io/repos/github/gustavosobral/space_invaders/badge.svg?branch=master)](https://coveralls.io/github/gustavosobral/space_invaders?branch=master)
+
+Space invaders detector gem.
 
 ## Installation
 
@@ -20,6 +23,10 @@ Or install it yourself as:
 ## Usage
 
 Check the examples folder.
+
+## To-do
+
+* Create a CLI
 
 ## Development
 
