@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 describe SpaceInvaders::Core::Analyzer do
-  it 'Load files and execute algorithm properly' do
+  it 'load files and execute algorithm properly' do
     analyzer_result = SpaceInvaders::Core::Analyzer.new(invaders: 'spec/fixtures/space_invaders',
                                                         radar: 'spec/fixtures/radar_image',
                                                         algorithm_name: :scan).analyze
@@ -9,7 +9,7 @@ describe SpaceInvaders::Core::Analyzer do
     expect(analyzer_result).to eq(reference)
   end
 
-  it 'Receive the chosen algorithm threshold' do
+  it 'receive the chosen algorithm threshold' do
     analyzer_result = SpaceInvaders::Core::Analyzer.new(invaders: 'spec/fixtures/space_invaders',
                                                         radar: 'spec/fixtures/radar_image',
                                                         algorithm_name: :scan,
@@ -18,7 +18,7 @@ describe SpaceInvaders::Core::Analyzer do
     expect(analyzer_result).to eq(reference)
   end
 
-  it 'Raise exception if a invalid algorithm is selected' do
+  it 'raise exception if a invalid algorithm is selected' do
     expect do
       SpaceInvaders::Core::Analyzer.new(algorithm_name: :scam).analyze
     end.to raise_error(SpaceInvaders::Core::AnalyzerError)

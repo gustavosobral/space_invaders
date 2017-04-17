@@ -15,6 +15,10 @@ module SpaceInvaders
         @algorithm_threshold = options[:algorithm_threshold]
       end
 
+      # Does the analysis by space invaders on the radar image.
+      #
+      # @return [String]
+      #   An image with the space invaders identified on them
       def analyze
         algorithm = select_algorithm
         space_invaders, radar_images = read_files
@@ -28,7 +32,7 @@ module SpaceInvaders
         when :scan
           ScanAlgorithm
         else
-          raise AnalyzerError, 'Invalid algorithm selected!'
+          raise AnalyzerError, 'Invalid algorithm selected'
         end
       end
 
