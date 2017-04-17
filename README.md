@@ -24,9 +24,9 @@ Or install it yourself as:
 
 Check the examples folder.
 
-## To-do
+### CLI
 
-* Create a CLI
+The application also has a CLI.
 
 ## Development
 
