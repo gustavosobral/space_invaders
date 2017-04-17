@@ -10,8 +10,10 @@ module SpaceInvaders
         @path = path
       end
 
-      # Process (Read and parse) the file on path
-      # @return [Array] An Array of entities (Space invaders or radar images) as matrices of data
+      # Process (Read and parse) the file on path.
+      #
+      # @return [Array]
+      #   An array of entities (Space invaders or radar images) as matrices of data
       def process
         @entities = []
         @marker_found = false

@@ -9,9 +9,10 @@ module SpaceInvaders
         @threshold = options[:threshold] || 0.80
       end
 
-      # Execute the algorithm
+      # Execute the algorithm.
+      #
       # @return [String]
-      #   An image with radar_image dimensions with the space invaders
+      #   An image with radar image dimensions with the space invaders
       #   area indentified on them
       def execute
         similarity_matrices = calculate_similarities

@@ -8,9 +8,10 @@ module SpaceInvaders
 
       def initialize(space_invaders, radar_image, _options = {})
         @space_invaders = space_invaders
-        @radar_image = radar_image
+        @radar_image    = radar_image
       end
 
+      # Strategy interface method.
       def execute
         raise NotImplementedError, ''
       end

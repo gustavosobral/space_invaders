@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 describe SpaceInvaders::Core::ScanAlgorithm do
-  it 'Implement execute method' do
+  it 'implement execute method' do
     scan_algorithm = SpaceInvaders::Core::ScanAlgorithm.new(nil, nil)
     expect(scan_algorithm).to respond_to(:execute)
   end
 
-  it 'Has a valid output' do
+  it 'has a valid output' do
     invaders_file = SpaceInvaders::Core::FileParser.new('spec/fixtures/space_invaders')
     space_invaders = invaders_file.process.each_with_index.map do |invader, index|
       SpaceInvaders::Core::SpaceInvader.new(index + 1, invader)

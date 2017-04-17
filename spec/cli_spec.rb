@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 describe SpaceInvaders::CLI do
-  it 'Fail with no aguments' do
+  it 'fail with no aguments' do
     expect do
       subject.analyze
     end.to raise_error(ArgumentError)
   end
 
-  it 'Works with no flags' do
+  it 'works with no flags' do
     output = capture(:stdout) do
       subject.analyze('spec/fixtures/space_invaders', 'spec/fixtures/radar_image')
     end
@@ -15,7 +15,7 @@ describe SpaceInvaders::CLI do
     expect(output).to eq(reference)
   end
 
-  it 'Accept algorithm threshold flag' do
+  it 'accept algorithm threshold flag' do
     subject.options = { threshold: 0.85 }
 
     output = capture(:stdout) do
@@ -25,7 +25,7 @@ describe SpaceInvaders::CLI do
     expect(output).to eq(reference)
   end
 
-  it 'Write output to a file' do
+  it 'can write output to a file' do
     fixtures = File.expand_path('../fixtures', __FILE__)
     FakeFS::FileSystem.clone(fixtures)
 
@@ -37,11 +37,13 @@ describe SpaceInvaders::CLI do
     end
   end
 
-  it 'Fail with wrong algorithm option' do
+  it 'fail with wrong algorithm option' do
     subject.options = { algorithm: :invalid }
 
     expect do
-      subject.analyze('spec/fixtures/space_invaders', 'spec/fixtures/radar_image')
+      capture(:stderr) do
+        subject.analyze('spec/fixtures/space_invaders', 'spec/fixtures/radar_image')
+      end
     end.to raise_error(SystemExit)
   end
 end

@@ -3,7 +3,7 @@
 require 'thor'
 
 module SpaceInvaders
-  # Class responsible for handling the command line interface
+  # Class responsible for handle the command line interface
   class CLI < Thor
     desc 'analyze SPACE_INVADERS RADAR_IMAGE', 'Analyze RADAR_IMAGE searching for SPACE_INVADERS'
     option :algorithm, type: :string,  aliases: [:a]
