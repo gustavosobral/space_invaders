@@ -33,7 +33,7 @@ describe SpaceInvaders::CLI do
 
     FakeFS do
       subject.analyze("#{fixtures}/space_invaders", "#{fixtures}/space_invaders")
-      expect(File.exists? 'output_path').to be true
+      expect(File.exist?('output_path')).to be true
     end
   end
 
@@ -42,6 +42,6 @@ describe SpaceInvaders::CLI do
 
     expect do
       subject.analyze('spec/fixtures/space_invaders', 'spec/fixtures/radar_image')
-    end.to raise_error(SpaceInvaders::Core::AnalyzerError)
+    end.to raise_error(SystemExit)
   end
 end

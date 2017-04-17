@@ -28,7 +28,7 @@ module SpaceInvaders
         when :scan
           ScanAlgorithm
         else
-          raise AnalyzerError, 'Invalid algorithm selected!'
+          raise AnalyzerError, 'Invalid algorithm selected'
         end
       end
 

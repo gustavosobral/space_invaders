@@ -16,13 +16,16 @@ module SpaceInvaders
                                                  algorithm_name: algorithm,
                                                  algorithm_threshold: options[:threshold]).analyze
       handle_output(options[:output], result)
+    rescue StandardError => e
+      $stderr.puts "ERROR: #{e.message}"
+      exit 1
     end
 
     private
 
     def handle_output(output_path, result)
       if output_path
-        File.write(output_path, "~~~\n" + result + "~~~\n")
+        File.write(output_path, "~~~~\n" + result + "~~~~\n")
       else
         puts result
       end
