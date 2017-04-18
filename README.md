@@ -1,6 +1,6 @@
 # SpaceInvaders
 
-[![Build Status](https://travis-ci.org/gustavosobral/space_invaders.svg?branch=master)](https://travis-ci.org/gustavosobral/space_invaders) [![Coverage Status](https://coveralls.io/repos/github/gustavosobral/space_invaders/badge.svg?branch=master)](https://coveralls.io/github/gustavosobral/space_invaders?branch=master)
+[![Build Status](https://travis-ci.org/gustavosobral/space_invaders.svg?branch=master)](https://travis-ci.org/gustavosobral/space_invaders) [![Coverage Status](https://coveralls.io/repos/github/gustavosobral/space_invaders/badge.svg?branch=master)](https://coveralls.io/github/gustavosobral/space_invaders?branch=master) [![Code Climate](https://codeclimate.com/github/gustavosobral/space_invaders/badges/gpa.svg)](https://codeclimate.com/github/gustavosobral/space_invaders) [![Issue Count](https://codeclimate.com/github/gustavosobral/space_invaders/badges/issue_count.svg)](https://codeclimate.com/github/gustavosobral/space_invaders)
 
 This is the SpaceInvaders detector gem! It aims to detect space invaders on radar images, even with noise on them. 
 
