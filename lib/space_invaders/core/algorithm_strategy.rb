@@ -2,7 +2,7 @@
 
 module SpaceInvaders
   module Core
-    # Interface abstraction to algorithm strategy pattern
+    # Interface abstraction to algorithms (Strategy pattern)
     class AlgorithmStrategy
       attr_reader :space_invaders, :radar_image
 

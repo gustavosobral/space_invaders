@@ -2,11 +2,12 @@
 
 module SpaceInvaders
   module Core
-    # Implementation of basic Image detection full scan algorithm
+    # Implementation of Image detection full scan algorithm
     class ScanAlgorithm < AlgorithmStrategy
       def initialize(space_invaders, radar_image, options = {})
         super(space_invaders, radar_image)
-        @threshold = options[:threshold] || 0.80
+        @threshold        = options[:threshold] || 0.80
+        @border_character = 'x'
       end
 
       # Execute the algorithm.
@@ -16,11 +17,11 @@ module SpaceInvaders
       #   area indentified on them
       def execute
         border_height, border_width = border_calculations
-        new_image = new_bordered_image(border_height, border_width, 'x')
+        new_image = new_bordered_image(border_height, border_width, @border_character)
         bordered_image = apply_border(border_height, border_width, new_image)
 
         similarity_matrices = space_invaders.map do |space_invader|
-          ScanAlgorithmSimilarity.new(space_invader, 'x', bordered_image).calculate
+          ScanAlgorithmSimilarity.new(space_invader, @border_character, bordered_image).calculate
         end
 
         result = merge_similarities(similarity_matrices, border_height, border_width)
@@ -47,7 +48,7 @@ module SpaceInvaders
       # Apply border on the radar image
       #
       # @return [RadarImage]
-      #   The new radar image bordered
+      #   A new radar image bordered
       def apply_border(border_height, border_width, bordered_image)
         radar_image.content[0..radar_image.height].each_with_index do |row, row_index|
           width_range = border_width..(border_width + radar_image.width - 1)

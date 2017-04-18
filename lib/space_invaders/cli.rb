@@ -9,6 +9,8 @@ module SpaceInvaders
     option :algorithm, type: :string,  aliases: [:a]
     option :threshold, type: :numeric, aliases: [:t]
     option :output,    type: :string,  aliases: [:o]
+
+    # CLI method to call the Core::Analyzer facade
     def analyze(invaders, radar)
       algorithm = options[:algorithm] ? options[:algorithm].to_sym : :scan
       result = SpaceInvaders::Core::Analyzer.new(invaders: invaders,

@@ -4,10 +4,11 @@ module SpaceInvaders
   module Core
     # Read and parse the input files
     class FileParser
-      attr_reader :path
+      attr_accessor :path, :entities
 
       def initialize(path)
         @path = path
+        @entities = []
       end
 
       # Process (Read and parse) the file on path.
@@ -15,10 +16,9 @@ module SpaceInvaders
       # @return [Array]
       #   An array of entities (Space invaders or radar images) as matrices of data
       def process
-        @entities = []
         @marker_found = false
         read_lines
-        @entities
+        entities
       end
 
       private
@@ -47,7 +47,7 @@ module SpaceInvaders
       end
 
       def insert_entity
-        @entities << @entity
+        entities << @entity
       end
     end
   end

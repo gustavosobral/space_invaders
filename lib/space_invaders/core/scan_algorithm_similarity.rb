@@ -5,7 +5,7 @@ module SpaceInvaders
     # Responsible for calculate the similarity between the
     # radar image and the space invader on full scan algorithm.
     class ScanAlgorithmSimilarity
-      attr_accessor :invader, :border, :bordered_image, :similarity_matrix
+      attr_reader :invader, :border, :bordered_image, :similarity_matrix
 
       def initialize(invader, border, bordered_image)
         @invader        = invader
