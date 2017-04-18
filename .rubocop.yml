@@ -16,3 +16,8 @@ Style/SpaceBeforeSemicolon:
 
 Style/RedundantReturn:
   AllowMultipleReturnValues: true
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    default: ()
+    '%w': '()'

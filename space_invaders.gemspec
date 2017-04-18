@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Gustavo Sobral']
   spec.email         = ['ghsobral@gmail.com']
 
-  spec.summary       = %w[Gem to detect Space Invaiders on radar images]
+  spec.summary       = %w(Gem to detect Space Invaiders on radar images)
   spec.homepage      = 'https://github.com/gustavosobral/space_invaders'
   spec.license       = 'MIT'
 
