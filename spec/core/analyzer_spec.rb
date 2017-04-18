@@ -23,4 +23,12 @@ describe SpaceInvaders::Core::Analyzer do
       SpaceInvaders::Core::Analyzer.new(algorithm_name: :scam).analyze
     end.to raise_error(SpaceInvaders::Core::AnalyzerError)
   end
+
+  it 'raise exception with invalid file measurments' do
+    expect do
+      SpaceInvaders::Core::Analyzer.new(invaders: 'spec/fixtures/space_invaders',
+                                        radar: 'spec/fixtures/small_radar_image',
+                                        algorithm_name: :scan).analyze
+    end.to raise_error(SpaceInvaders::Core::AnalyzerError)
+  end
 end
